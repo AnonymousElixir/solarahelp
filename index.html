@@ -12,7 +12,7 @@
             padding: 0;
             background-color: #121212;
             color: #ffffff;
-            padding-bottom: 60px; /* Space for the footer */
+            padding-bottom: 60px; 
         }
 
         header {
@@ -77,15 +77,15 @@
 
         .ratstuff {
             display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            align-items: center;    /* Center align the elements */
+            flex-direction: column; 
+            align-items: center;    
             padding: 40px 20px;
-            text-align: center;     /* Center the text */
+            text-align: center;    
         }
 
         .ratstuff h2, .ratstuff p {
-            margin: 20px 0;         /* Add spacing between headers and paragraphs */
-            max-width: 600px;       /* Optional: Limit width for better readability */
+            margin: 20px 0;         
+            max-width: 600px;       
             z-index: 5
         }
 
@@ -111,15 +111,15 @@
 
         .help {
             display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            align-items: center;    /* Center align the elements */
+            flex-direction: column; 
+            align-items: center;    
             padding: 40px 20px;
-            text-align: center;     /* Center the text */
+            text-align: center;     
         }
 
         .help h2, .help p {
-            margin: 20px 0;         /* Add spacing between headers and paragraphs */
-            max-width: 600px;       /* Optional: Limit width for better readability */
+            margin: 20px 0;         
+            max-width: 600px;       
         }
 
         .help .feature {
@@ -180,16 +180,16 @@
         .gradient-title {
     font-size: 2.5rem;
     font-weight: bold;
-    background: linear-gradient(to bottom, #4100b9, #c6c1c7); /* Gradient from top to bottom */
+    background: linear-gradient(to bottom, #4100b9, #c6c1c7); 
     -webkit-background-clip: text;
     color: transparent;
     text-align: center;
     position: relative;
     z-index: 5;
     text-shadow: 
-        0 0 5px rgba(65, 0, 185, 0.6),   /* Soft glow of the gradient color */
-        0 0 10px rgba(65, 0, 185, 0.4),  /* Larger glow effect */
-        0 0 15px rgba(65, 0, 185, 0.2);  /* Even larger glow */
+        0 0 5px rgba(65, 0, 185, 0.6),   
+        0 0 10px rgba(65, 0, 185, 0.4),  
+        0 0 15px rgba(65, 0, 185, 0.2);  
 }
 
 .gradient-title::after {
@@ -199,7 +199,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, #ff4081, #dad5d6); /* Secondary gradient for glowing effect */
+    background: linear-gradient(to bottom, #ff4081, #dad5d6); 
     -webkit-background-clip: text;
     color: transparent;
     z-index: -100;
@@ -207,14 +207,14 @@
 
 .contact-links {
     display: flex;
-    justify-content: space-evenly; /* Distribute space evenly between items */
-    align-items: center;           /* Align items vertically */
+    justify-content: space-evenly; 
+    align-items: center;          
     margin-top: 20px;
 }
 
 .link-item {
-    margin: 0 10px; /* Space between each link item */
-    text-align: center; /* Center the text in each link item */
+    margin: 0 10px; 
+    text-align: center; 
 }
 
 footer {
@@ -229,13 +229,58 @@ footer {
     z-index: 1000;
 }
 
+
+#music-player {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        
+        .audio-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .audio-controls button {
+            background-color: #4100b9;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .audio-controls button:hover {
+            background-color: #8b60ff;
+        }
+
+       
+        .audio-player {
+            display: block;
+            margin: 0 auto;
+        }
+        .no-margin {
+    margin: 0;
+}
+
     </style>
 </head>
+
+
 <body>
+
+
 
 <header>
     <div class="logo">Solara</div>
     <nav>
+        <a href="#help">Help</a>
         <a href="#ratstuff">Ratstuff</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -247,12 +292,32 @@ footer {
     <p>THIS IS ASSUMING YOU HAVE DOWNLOADED THE <em>REAL</em> SOLARA FROM <a href="https://getsolara.dev/">HERE</a>
     </p>
     <h1> <b>getsolara.dev is the only legitimate place to get solara information and downloads</b></h1>
+    
 </section>
 
 <section id="ratstuff" class="ratstuff">
+    
+    
+    <h2 class="gradient-title">Music Playlist</h2>
+        <p style="margin: 0;">if you wanna play some music while reading</p>
+<p style="margin: 0;">audio is not levelled so some may be loud</p>
+
+
+    <audio id="audio-player" class="audio-player" controls>
+        <source id="audio-source" src="https://cdn.glitch.global/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/Wet%20Hands.mp3?v=1736266316291" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="audio-controls">
+        <button id="play-pause" onclick="togglePlayPause()">Play</button>
+        <button onclick="previousSong()">Previous</button>
+        <button onclick="nextSong()">Next</button>
+    </div>
+
+
     <h2 class="gradient-title">"Its a rat"</h2>
     <p>the REAL Solara at getsolara.dev, fortunately, is not a rat.</p>
 
+    
 
   <h2 class="gradient-title">"Well my antivirus says its a trojan/virus/whatever"</h2>
   <p>Solara, along with many other executors, are giving positives to antivirus's due to the simple fact that they are hacks. Solara taps into the game by using similar methods to malware or virus's      
@@ -269,6 +334,7 @@ footer {
 
 <section id="help" class="help">
     <h1 style="font-size: 50px;">HERE IS YOUR HELP</h1>
+    <h1>"Solara.exe not found after installation"</h1> <p>this is because your antivirus removed it</p>
     <h1>"Is solara down?:</h1> <p>Most likely probably not check the "Status" channel in "The container" discord server linked at the bottom of this page</p>
     <h1>"Is it updated?"</h1> <p>Either join the telegram (when it works again or update the links on this site), or just wait a day or 2 and it'll probably be updated</p>
     <h1>HOW TO SET SOLARA UP (fullscreen)</h1>
@@ -304,24 +370,22 @@ footer {
     <h2 class="gradient-title">How do i use solara?</h2>
     <p>ok, assuming you got solara working from following my video above, run the bootstrapper, and it will open a solara window, open the roblox app to the homepage, and click the paperclip icon to inject. then get a script, put it in solara, join a game, run the script with the play button. and youre now a super epik cool awesome hacker!</p>
     <h2 class="gradient-title">It keeps crashing</h2> <p>Check your antivirus, firewall, etc etc. Narrow down the cause of it then check this list again</p>
-    <h2 class="gradient-title">"Its not starting"</h2> ok, do this STEP BY STEP, 1. attempt to close solara, it should pop up a window with 3 options, click "close the program" 2. click on solara and press spacebar, it should then pop up another window, with "close the program", and "wait for the program to respond", just leave it alone with that window open, and it'll fix itself eventually. or turn off your antivirus</p>
+    <h2 class="gradient-title">"Its not starting"</h2> ok, do this STEP BY STEP, 
+    <p>1. attempt to close solara, it should pop up a window with 3 options, click "close the program" </p> <p>2. click on solara and press spacebar, it should then pop up another window, with "close the program", and "wait for the program to respond", </p>just leave it alone with that window open, and it'll fix itself eventually. or turn off your antivirus</p>
     <h2 class="gradient-title">"Error downloading file"</h2> Try a vpn, or turn off your antivirus, totally, or use a dns like 1.1.1.1, look up how to change your dns</p>
     
   </p>
 </section>
 <section id="contact" class="contact">
     <h1 class="gradient-title">Contact Us</h1>
-    <p class="gradient-title"style="font-size: 15px;">If you need assistance or want to get in touch, here are the available links:</p>
+    <p class="gradient-title"style="font-size: 15px;">If you need further help, head back to where you found this link</p>
     
     <div class="contact-links">
         <div class="link-item">
-            <h3><a href="https://t.me/thesolara">Telegram</a></h3>
-            <p><a href="">Telegram page is down</a></p>
+            <h3><a href=""></a></h3>
+            
         </div>
-        <div class="link-item">
-            <h3><a href="https://discord.gg/sqhVmqRfxA">Old discord (links to the current)</a></h3>
-            <p><a href="https://discord.gg/sqhVmqRfxA">The container</a></p>
-        </div>
+        
         
         
     </div>
@@ -329,8 +393,60 @@ footer {
 
 
 <footer>
-    <p>This site was NOT made by Quivings, the original dev</a></p>
+    <p>This site was NOT made by Quivings, the original dev, it was made by maxi74x1</a></p>
 </footer>
+
+<script>
+    
+    const playlist = [
+        
+        'https://cdn.glitch.global/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/SWEDEN.mp3?v=1736266511408',
+        'https://cdn.glitch.global/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/C418%20-%20Subwoofer%20Lullaby%20-%20Minecraft%20Volume%20Alpha.mp3?v=1736266528292',
+        'https://cdn.glitch.global/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/Houdini.mp3?v=1736266329520',
+        'https://cdn.glitch.global/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/safe%20and%20sound.mp3?v=1736266461391',
+        'https://cdn.glitch.me/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/YMCA%20(Original%20Version%201978).wav?v=1736266584418',
+        'https://cdn.glitch.me/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/Get%20Lucky.wav?v=1736266592313',
+        'https://cdn.glitch.global/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/Teen%20Titans%20Go%20Official%20Soundtrack%20Rise%20Up%20BER%20WaterTower.mp3?v=1736266339885'
+
+
+         
+    ];
+    let currentSongIndex = 0;
+
+    
+    const audioPlayer = document.getElementById('audio-player');
+    const playPauseButton = document.getElementById('play-pause');
+    document.getElementById('audio-source').src = playlist[currentSongIndex];
+
+    
+    function togglePlayPause() {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            playPauseButton.textContent = "Pause";
+        } else {
+            audioPlayer.pause();
+            playPauseButton.textContent = "Play";
+        }
+    }
+
+    
+    function nextSong() {
+        currentSongIndex = (currentSongIndex + 1) % playlist.length;
+        document.getElementById('audio-source').src = playlist[currentSongIndex];
+        audioPlayer.load();
+        audioPlayer.play();
+        playPauseButton.textContent = "Pause";
+    }
+
+    
+    function previousSong() {
+        currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
+        document.getElementById('audio-source').src = playlist[currentSongIndex];
+        audioPlayer.load();
+        audioPlayer.play();
+        playPauseButton.textContent = "Pause";
+    }
+</script>
 
 </body>
 </html>
