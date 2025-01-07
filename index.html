@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solara Help - Everything you need to know</title>
+    <style>
+        body {
+            font-family: 'Gabarito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            padding-bottom: 60px; /* Space for the footer */
+        }
+
+        header {
+            background-color: #1e1e1e;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #862aee;
+        }
+
+        header nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #8b60ff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #4100b9, #000000);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero .btn {
+            padding: 10px 20px;
+            background-color: #1e1e1e;
+            color: #4100b9;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background-color: #4100b9;
+        }
+
+        .ratstuff {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center;    /* Center align the elements */
+            padding: 40px 20px;
+            text-align: center;     /* Center the text */
+        }
+
+        .ratstuff h2, .ratstuff p {
+            margin: 20px 0;         /* Add spacing between headers and paragraphs */
+            max-width: 600px;       /* Optional: Limit width for better readability */
+            z-index: 5
+        }
+
+
+        .ratstuff .feature {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        .ratstuff .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #4100b9;
+        }
+
+        .ratstuff .feature p {
+            font-size: 1rem;
+            color: #cccccc;
+        }
+
+        .help {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center;    /* Center align the elements */
+            padding: 40px 20px;
+            text-align: center;     /* Center the text */
+        }
+
+        .help h2, .help p {
+            margin: 20px 0;         /* Add spacing between headers and paragraphs */
+            max-width: 600px;       /* Optional: Limit width for better readability */
+        }
+
+        .help .feature {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .help .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #4100b9;
+        }
+
+        .help .feature p {
+            font-size: 1rem;
+            color: #cccccc;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .cta a {
+            background-color: #4100b9;
+            color: #1e1e1e;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .cta a:hover {
+            background-color: #4100b9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e1e1e;
+            color: #cccccc;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1000;
+        }
+
+        footer a {
+            color: #4100b9;
+            text-decoration: none;
+        }
+
+        .gradient-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #4100b9, #c6c1c7); /* Gradient from top to bottom */
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    text-shadow: 
+        0 0 5px rgba(65, 0, 185, 0.6),   /* Soft glow of the gradient color */
+        0 0 10px rgba(65, 0, 185, 0.4),  /* Larger glow effect */
+        0 0 15px rgba(65, 0, 185, 0.2);  /* Even larger glow */
+}
+
+.gradient-title::after {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #ff4081, #dad5d6); /* Secondary gradient for glowing effect */
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: -100;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: space-evenly; /* Distribute space evenly between items */
+    align-items: center;           /* Align items vertically */
+    margin-top: 20px;
+}
+
+.link-item {
+    margin: 0 10px; /* Space between each link item */
+    text-align: center; /* Center the text in each link item */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #cccccc;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Solara</div>
+    <nav>
+        <a href="#ratstuff">Ratstuff</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Welcome to Solara info</h1>
+    <p>This is a site that contains as much information as i, the maker of the site (not qui) knows</p>
+    <p>THIS IS ASSUMING YOU HAVE DOWNLOADED THE <em>REAL</em> SOLARA FROM <a href="https://getsolara.dev/">HERE</a>
+    </p>
+    <h1> <b>getsolara.dev is the only legitimate place to get solara information and downloads</b></h1>
+</section>
+
+<section id="ratstuff" class="ratstuff">
+    <h2 class="gradient-title">"Its a rat"</h2>
+    <p>the REAL Solara at getsolara.dev, fortunately, is not a rat.</p>
+
+
+  <h2 class="gradient-title">"Well my antivirus says its a trojan/virus/whatever"</h2>
+  <p>Solara, along with many other executors, are giving positives to antivirus's due to the simple fact that they are hacks. Solara taps into the game by using similar methods to malware or virus's      
+    <h2 class="gradient-title">"Well malwarebytes says its bad so it HAS to be"</h2>
+    <p>Solara identifies the Roblox process, and another Boostrapper process, and another solara process running on the user's machine and ends the conflicting process (As said by the bootstrapper). This is usually done by scanning active processes for Roblox's executable (RobloxPlayerBeta.exe). Which is also a common things that virus's do</p>
+    <h3>DLL Injection:</h3><p>The executor injects a custom dynamic-link library (DLL) into the Roblox process. This DLL acts as a bridge, allowing external scripts to be executed within Roblox's environment.</p>
+    <h3>Hooking Functions:</h3> <p>The injected DLL hooks into Roblox's Lua engine or runtime. Hooking means intercepting function calls in Roblox, allowing the executor to manipulate or augment them with custom code.</p>
+    <p>Script Execution: Once the DLL is in place, the executor sends Lua scripts to the hooked engine. These scripts are interpreted and executed within the game, enabling custom functionality like cheats or modifications.</p>
+    <h3>Memory Manipulation:</h3> <p>Some executors also directly manipulate the game's memory to change values, bypass restrictions, or enable features. This is often paired with the script execution process.</p>
+    <p>Script Execution: Once the DLL is in place, the executor sends Lua scripts to the hooked engine. These scripts are interpreted and executed within the game, enabling custom functionality like cheats or modifications.</p>
+    <h3>zGrat Relation:</h3> <p>For people who dont know, zGrat is a remote access trojan software. Solara does NOT use this, it has a similar extraction and installation method, it does <b>NOT INSTALL REMOTE ACCESS SOFTWARE ON YOUR PC </b></p>
+</p>
+</section>
+
+<section id="help" class="help">
+    <h1 style="font-size: 50px;">HERE IS YOUR HELP</h1>
+    <h1>"Is solara down?:</h1> <p>Most likely probably not check the "Status" channel in "The container" discord server linked at the bottom of this page</p>
+    <h1>"Is it updated?"</h1> <p>Either join the telegram (when it works again or update the links on this site), or just wait a day or 2 and it'll probably be updated</p>
+    <h1>HOW TO SET SOLARA UP (fullscreen)</h1>
+    <video width="640" height="360" controls>
+        <source src="https://cdn.glitch.global/d401d5e6-2835-4956-b62b-4e685b83a365/solara%20setup.mp4?v=1733029579355" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>THEN AFTER FOLLOWING THE VIDEO RUN THE BOOTSTRAPPER</p>
+    <h2 class="gradient-title">"Its not starting"</h2>
+    
+    <p>Open windows defender, head to virus and threat protection settings, check to see if it detected anything in current threats, if not, go to protection history and click on the "Threat blocked" until you find bootstrapper.exe or solara.exe then click actions, and restore, then go back to virus and threat protection, then click on 'Manage settings' under virus and threat proteciton settings and turn off realtime protectoin </p>
+
+    <h2 class="gradient-title">"I cant access the download"</h2>
+    <p>Use a vpn, or a dns, if you are using a dns, use 1.1.1.1, google how to use 1.1.1.1 dns</p>
+    <h2 class="gradient-title">"Solara.exe not found after installation (or something similar)"</h2>
+    This is because the solara.exe was quarantined by your antivirus. </li>  
+    <li>Go into windows security</li>
+    <li>go to virus and threat protection</li>
+    <li>go to protection history</li> 
+    <li>click on the protection that is related to solara (i attached an image)</li>
+    <li>(you may have to click to expand a blocked threat, like the one under the opened in the image)</li>
+    <li>click on actions and click "Allow on device" </li>
+    <li>you may have to do this multiple times</li>
+    <img src="https://cdn.glitch.global/d401d5e6-2835-4956-b62b-4e685b83a365/2f89180c-c858-4614-9cab-8702bd465a06.image.png?v=1735793871047">
+    <h2 class="gradient-title">"Access is denied"</h2>
+  <p>Check your firewall and let both bootsrapper.exe and solara.exe through</p>
+  <h2 class="gradient-title">"Does anyone have a script for (Game)"</h2>
+    <p>Solara as of version 2.08 has a built in script finder, you can find it in here</a></p>
+    <img src="https://cdn.glitch.global/d401d5e6-2835-4956-b62b-4e685b83a365/script%20tab%20bigger.png?v=1735793124999">
+    <p>if you dont see that, then install the correct solara, or update your bootstrapper</p>
+    <li>it doesnt show a "homepage" of scripts, you have to search for what you want</li>
+    <li> when you find a script you want, then click the paper plane icon at the bottom right of the thumbnail of it</li>
+    <h2 class="gradient-title">How do i use solara?</h2>
+    <p>ok, assuming you got solara working from following my video above, run the bootstrapper, and it will open a solara window, open the roblox app to the homepage, and click the paperclip icon to inject. then get a script, put it in solara, join a game, run the script with the play button. and youre now a super epik cool awesome hacker!</p>
+    <h2 class="gradient-title">It keeps crashing</h2> <p>Check your antivirus, firewall, etc etc. Narrow down the cause of it then check this list again</p>
+    <h2 class="gradient-title">"Its not starting"</h2> ok, do this STEP BY STEP, 1. attempt to close solara, it should pop up a window with 3 options, click "close the program" 2. click on solara and press spacebar, it should then pop up another window, with "close the program", and "wait for the program to respond", just leave it alone with that window open, and it'll fix itself eventually. or turn off your antivirus</p>
+    <h2 class="gradient-title">"Error downloading file"</h2> Try a vpn, or turn off your antivirus, totally, or use a dns like 1.1.1.1, look up how to change your dns</p>
+    
+  </p>
+</section>
+<section id="contact" class="contact">
+    <h1 class="gradient-title">Contact Us</h1>
+    <p class="gradient-title"style="font-size: 15px;">If you need assistance or want to get in touch, here are the available links:</p>
+    
+    <div class="contact-links">
+        <div class="link-item">
+            <h3><a href="https://t.me/thesolara">Telegram</a></h3>
+            <p><a href="">Telegram page is down</a></p>
+        </div>
+        <div class="link-item">
+            <h3><a href="https://discord.gg/sqhVmqRfxA">Old discord (links to the current)</a></h3>
+            <p><a href="https://discord.gg/sqhVmqRfxA">The container</a></p>
+        </div>
+        
+        
+    </div>
+</section>
+
+
+<footer>
+    <p>This site was NOT made by Quivings, the original dev</a></p>
+</footer>
+
+</body>
+</html>
