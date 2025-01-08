@@ -204,6 +204,10 @@
     color: transparent;
     z-index: -100;
 }
+text-to-speak {
+            cursor: pointer;
+            font-weight: bold;
+        }
 
 .contact-links {
     display: flex;
@@ -289,6 +293,7 @@ footer {
 <section class="hero">
     <h1>Welcome to Solara info</h1>
     <p>This is a site that contains as much information as i, the maker of the site (not qui) knows</p>
+    
     <p>THIS IS ASSUMING YOU HAVE DOWNLOADED THE <em>REAL</em> SOLARA FROM <a href="https://getsolara.dev/">HERE</a>
     </p>
     <h1> <b>getsolara.dev is the only legitimate place to get solara information and downloads</b></h1>
@@ -298,13 +303,14 @@ footer {
 <section id="ratstuff" class="ratstuff">
     
     
+
     <h2 class="gradient-title">Music Playlist</h2>
         <p style="margin: 0;">if you wanna play some music while reading</p>
 <p style="margin: 0;">audio is not levelled so some may be loud</p>
 
 
     <audio id="audio-player" class="audio-player" controls>
-        <source id="audio-source" src="https://cassidycamp.work/solarahelp/Requiem%20In%20Cello.mp3" type="audio/mp3">
+        <source id="audio-source" src="https://cdn.glitch.global/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/Wet%20Hands.mp3?v=1736266316291" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
     <div class="audio-controls">
@@ -313,43 +319,45 @@ footer {
         <button onclick="nextSong()">Next</button>
     </div>
 
+    <button id="speak-button">Select text to read aloud</button>
+    <p> click this button, then click on any text you want to be read aloud, you only need to click this button once</p>
 
-    <h2 class="gradient-title">"Its a rat"</h2>
-    <p>the REAL Solara at getsolara.dev, fortunately, is not a rat.</p>
+
+    <h2  class="gradient-title text-to-speak">"Its a rat"</h2>
+    <p class="text-to-speak" >the REAL Solara at getsolara.dev, fortunately, is not a rat.</p>
 
     
 
-  <h2 class="gradient-title">"Well my antivirus says its a trojan/virus/whatever"</h2>
-  <p>Solara, along with many other executors, are giving positives to antivirus's due to the simple fact that they are hacks. Solara taps into the game by using similar methods to malware or virus's      
-    <h2 class="gradient-title">"Well malwarebytes says its bad so it HAS to be"</h2>
-    <p>Solara identifies the Roblox process, and another Boostrapper process, and another solara process running on the user's machine and ends the conflicting process (As said by the bootstrapper). This is usually done by scanning active processes for Roblox's executable (RobloxPlayerBeta.exe). Which is also a common things that virus's do</p>
-    <h3>DLL Injection:</h3><p>The executor injects a custom dynamic-link library (DLL) into the Roblox process. This DLL acts as a bridge, allowing external scripts to be executed within Roblox's environment.</p>
-    <h3>Hooking Functions:</h3> <p>The injected DLL hooks into Roblox's Lua engine or runtime. Hooking means intercepting function calls in Roblox, allowing the executor to manipulate or augment them with custom code.</p>
-    <p>Script Execution: Once the DLL is in place, the executor sends Lua scripts to the hooked engine. These scripts are interpreted and executed within the game, enabling custom functionality like cheats or modifications.</p>
-    <h3>Memory Manipulation:</h3> <p>Some executors also directly manipulate the game's memory to change values, bypass restrictions, or enable features. This is often paired with the script execution process.</p>
-    <p>Script Execution: Once the DLL is in place, the executor sends Lua scripts to the hooked engine. These scripts are interpreted and executed within the game, enabling custom functionality like cheats or modifications.</p>
-    <h3>zGrat Relation:</h3> <p>For people who dont know, zGrat is a remote access trojan software. Solara does NOT use this, it has a similar extraction and installation method, it does <b>NOT INSTALL REMOTE ACCESS SOFTWARE ON YOUR PC </b></p>
+  <h2   class="gradient-title text-to-speak" >"Well my antivirus says its a trojan/virus/whatever"</h2>
+  <p class="text-to-speak">Solara, along with many other executors, are giving positives to antivirus's due to the simple fact that they are hacks. Solara taps into the game by using similar methods to malware or virus's      
+    <h2  class="gradient-title text-to-speak">"Well malwarebytes says its bad so it HAS to be"</h2>
+    <p class="text-to-speak">Solara identifies the Roblox process, and another Bootstrapper process, and another solara process running on the user's machine and ends the conflicting process (As said by the bootstrapper). This is usually done by scanning active processes for Roblox's executable (RobloxPlayerBeta.exe). Which is also a common thing that virus's do</p>
+    <h3 class="text-to-speak">DLL Injection:</h3><p class="text-to-speak">The executor injects a custom dynamic-link library (DLL) into the Roblox process. This DLL acts as a bridge, allowing external scripts to be executed within Roblox's environment.</p>
+    <h3 class="text-to-speak">Hooking Functions:</h3> <p class="text-to-speak">The injected DLL hooks into Roblox's Lua engine and runtime. Hooking means intercepting function calls in Roblox, allowing the executor to manipulate or augment them with custom code.</p>
+    <h3 class="text-to-speak">Memory Manipulation:</h3> <p class="text-to-speak">Some executors also directly manipulate the game's memory to change values, bypass restrictions, or enable features. This is often paired with the script execution process.</p>
+    <h3 class="text-to-speak">Script Execution</h3><p class="text-to-speak">Once the DLL is in place, the executor sends Lua scripts to the hooked engine. These scripts are interpreted and executed within the game, enabling custom functionality like cheats or modifications.</p>
+    <h3 class="text-to-speak">zGrat Relation:</h3> <p class="text-to-speak">For people who dont know, zGrat is a remote access trojan software. Solara does NOT use this, it has a similar extraction and installation method, it does <b>NOT INSTALL REMOTE ACCESS SOFTWARE ON YOUR PC </b></p>
 </p>
 </section>
 
 <section id="help" class="help">
-    <h1 style="font-size: 50px;">HERE IS YOUR HELP</h1>
-    <h1>"Solara.exe not found after installation"</h1> <p>this is because your antivirus removed it</p>
-    <h1>"Is solara down?:</h1> <p>Most likely probably not check the "Status" channel in "The container" discord server linked at the bottom of this page</p>
-    <h1>"Is it updated?"</h1> <p>Either join the telegram (when it works again or update the links on this site), or just wait a day or 2 and it'll probably be updated</p>
-    <h1>HOW TO SET SOLARA UP (fullscreen)</h1>
+    <h1 class="gradient-title text-to-speak" style="font-size: 50px;">HERE IS YOUR HELP</h1>
+    <h1 class="gradient-title text-to-speak">"Solara.exe not found after installation"</h1> <p class="text-to-speak">this is because your antivirus removed it</p>
+    <h1 class="gradient-title text-to-speak">"Is solara down?:</h1> <p class="text-to-speak">Most likely probably not, check the "Status" channel in "The container" or "Ronix Hub" discord server</p>
+    <h1 class="gradient-title text-to-speak">"Is it updated?"</h1> <p class="text-to-speak">Check, again, in the discord servers mentioned above. Or just wait a day or 2 and it'll probably be updated</p>
+    <h1 class="gradient-title text-to-speak">HOW TO SET SOLARA UP (fullscreen)</h1>
     <video width="640" height="360" controls>
         <source src="https://cdn.glitch.global/d401d5e6-2835-4956-b62b-4e685b83a365/solara%20setup.mp4?v=1733029579355" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <p>THEN AFTER FOLLOWING THE VIDEO RUN THE BOOTSTRAPPER</p>
-    <h2 class="gradient-title">"Its not starting"</h2>
+    <p class="gradient-title text-to-speak">THEN AFTER FOLLOWING THE VIDEO RUN THE BOOTSTRAPPER</p>
+    <h2 class="gradient-title text-to-speak">"Its not starting"</h2>
     
-    <p>Open windows defender, head to virus and threat protection settings, check to see if it detected anything in current threats, if not, go to protection history and click on the "Threat blocked" until you find bootstrapper.exe or solara.exe then click actions, and restore, then go back to virus and threat protection, then click on 'Manage settings' under virus and threat proteciton settings and turn off realtime protectoin </p>
+    <p class="text-to-speak" >Open windows defender, head to virus and threat protection settings, check to see if it detected anything in current threats, if not, go to protection history and click on the "Threat blocked" until you find bootstrapper.exe or solara.exe then click actions, and restore, then go back to virus and threat protection, then click on 'Manage settings' under virus and threat protection settings and turn off realtime protection </p>
 
-    <h2 class="gradient-title">"I cant access the download"</h2>
-    <p>Use a vpn, or a dns, if you are using a dns, use 1.1.1.1, google how to use 1.1.1.1 dns</p>
-    <h2 class="gradient-title">"Solara.exe not found after installation (or something similar)"</h2>
+    <h2 class="gradient-title text-to-speak">"I cant access the download"</h2>
+    <p class="text-to-speak" >Use a vpn, or a dns, if you are using a dns, use 1.1.1.1, google how to use 1.1.1.1 dns</p>
+    <h2 class="gradient-title text-to-speak">"Solara.exe not found after installation (or something similar)"</h2>
     This is because the solara.exe was quarantined by your antivirus. </li>  
     <li>Go into windows security</li>
     <li>go to virus and threat protection</li>
@@ -359,26 +367,26 @@ footer {
     <li>click on actions and click "Allow on device" </li>
     <li>you may have to do this multiple times</li>
     <img src="https://cdn.glitch.global/d401d5e6-2835-4956-b62b-4e685b83a365/2f89180c-c858-4614-9cab-8702bd465a06.image.png?v=1735793871047">
-    <h2 class="gradient-title">"Access is denied"</h2>
+    <h2 class="gradient-title text-to-speak">"Access is denied"</h2>
   <p>Check your firewall and let both bootsrapper.exe and solara.exe through</p>
-  <h2 class="gradient-title">"Does anyone have a script for (Game)"</h2>
+  <h2 class="gradient-title text-to-speak">"Does anyone have a script for (Game)"</h2>
     <p>Solara as of version 2.08 has a built in script finder, you can find it in here</a></p>
     <img src="https://cdn.glitch.global/d401d5e6-2835-4956-b62b-4e685b83a365/script%20tab%20bigger.png?v=1735793124999">
     <p>if you dont see that, then install the correct solara, or update your bootstrapper</p>
-    <li>it doesnt show a "homepage" of scripts, you have to search for what you want</li>
-    <li> when you find a script you want, then click the paper plane icon at the bottom right of the thumbnail of it</li>
-    <h2 class="gradient-title">How do i use solara?</h2>
-    <p>ok, assuming you got solara working from following my video above, run the bootstrapper, and it will open a solara window, open the roblox app to the homepage, and click the paperclip icon to inject. then get a script, put it in solara, join a game, run the script with the play button. and youre now a super epik cool awesome hacker!</p>
-    <h2 class="gradient-title">It keeps crashing</h2> <p>Check your antivirus, firewall, etc etc. Narrow down the cause of it then check this list again</p>
-    <h2 class="gradient-title">"Its not starting"</h2> ok, do this STEP BY STEP, 
-    <p>1. attempt to close solara, it should pop up a window with 3 options, click "close the program" </p> <p>2. click on solara and press spacebar, it should then pop up another window, with "close the program", and "wait for the program to respond", </p>just leave it alone with that window open, and it'll fix itself eventually. or turn off your antivirus</p>
-    <h2 class="gradient-title">"Error downloading file"</h2> Try a vpn, or turn off your antivirus, totally, or use a dns like 1.1.1.1, look up how to change your dns</p>
+    <li class="text-to-speak">it doesnt show a "homepage" of scripts, you have to search for what you want</li>
+    <li class="text-to-speak"> when you find a script you want, then click the paper plane icon at the bottom right of the thumbnail of it</li>
+    <h2 class="gradient-title text-to-speak">How do i use solara?</h2>
+    <p class="text-to-speak">ok, assuming you got solara working from following my video above, run the bootstrapper, and it will open a solara window, open the roblox app to the homepage, and click the paperclip icon to inject. then get a script, put it in solara, join a game, run the script with the play button. and youre now a super epik cool awesome hacker!</p>
+    <h2 class="gradient-title text-to-speak">It keeps crashing</h2> <p>Check your antivirus, firewall, etc etc. Narrow down the cause of it then check this list again</p>
+    <h2 class="gradient-title text-to-speak">"Its not starting"</h2> ok, do this STEP BY STEP, 
+    <section class="text-to-speak"><p class="text-to-speak">1. attempt to close solara, it should pop up a window with 3 options, click "close the program" </p> <p class="text-to-speak">2. click on solara and press spacebar, it should then pop up another window, with "close the program", and "wait for the program to respond", </p> <p class="text-to-speak"> just leave it alone with that window open, and it'll fix itself eventually. or turn off your antivirus</p> </section>
+    <h2 class="gradient-title text-to-speak">"Error downloading file"</h2> Try a vpn, or turn off your antivirus, totally, or use a dns like 1.1.1.1, look up how to change your dns</p>
     
   </p>
 </section>
 <section id="contact" class="contact">
-    <h1 class="gradient-title">Contact Us</h1>
-    <p class="gradient-title"style="font-size: 15px;">If you need further help, head back to where you found this link</p>
+    <h1 class="gradient-title text-to-speak">Contact Us</h1>
+    <p class="gradient-title text-to-speak" style="font-size: 15px;">If you need further help, head back to where you found this link</p>
     
     <div class="contact-links">
         <div class="link-item">
@@ -393,20 +401,21 @@ footer {
 
 
 <footer>
-    <p>This site was NOT made by Quivings, the original dev, it was made by maxi74x1</a></p>
+    <p>This site was NOT made by Quivings, the original dev, it was made by maxi74x1</p>
 </footer>
 
 <script>
     
     const playlist = [
-        'https://cdn.glitch.global/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/Wet%20Hands.mp3?v=1736266316291',
+        
         'https://cdn.glitch.global/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/SWEDEN.mp3?v=1736266511408',
         'https://cdn.glitch.global/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/C418%20-%20Subwoofer%20Lullaby%20-%20Minecraft%20Volume%20Alpha.mp3?v=1736266528292',
         'https://cdn.glitch.global/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/Houdini.mp3?v=1736266329520',
         'https://cdn.glitch.global/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/safe%20and%20sound.mp3?v=1736266461391',
         'https://cdn.glitch.me/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/YMCA%20(Original%20Version%201978).wav?v=1736266584418',
         'https://cdn.glitch.me/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/Get%20Lucky.wav?v=1736266592313',
-        'https://cdn.glitch.global/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/Teen%20Titans%20Go%20Official%20Soundtrack%20Rise%20Up%20BER%20WaterTower.mp3?v=1736266339885'
+        'https://cdn.glitch.global/e7c45f83-578e-4b3b-a02f-0c1cbfff4042/Teen%20Titans%20Go%20Official%20Soundtrack%20Rise%20Up%20BER%20WaterTower.mp3?v=1736266339885',
+        'https://github.com/AnonymousElixir/solarahelp/raw/refs/heads/main/Requiem%20In%20Cello.mp3'
 
 
          
@@ -447,6 +456,63 @@ footer {
         playPauseButton.textContent = "Pause";
     }
 </script>
+<script>
+
+    const speakButton = document.getElementById('speak-button');
+    let selectedText = '';
+
+
+    let isListening = false;
+
+    let speechQueue = [];
+
+
+    let isSpeaking = false;
+
+   
+    function speakText(text) {
+        const utterance = new SpeechSynthesisUtterance(text);
+
+        
+        utterance.onend = () => {
+            isSpeaking = false; 
+            if (speechQueue.length > 0) {
+                const nextText = speechQueue.shift(); 
+                speakText(nextText); 
+            }
+        };
+
+       
+        utterance.onstart = () => {
+            isSpeaking = true; 
+        };
+
+        // Speak the text
+        speechSynthesis.speak(utterance);
+    }
+
+    
+    speakButton.addEventListener('click', () => {
+        if (!isListening) {
+            isListening = true; 
+
+            document.querySelectorAll('.text-to-speak').forEach((element) => {
+                element.addEventListener('click', () => {
+                    selectedText = element.innerText;
+
+                    
+                    speechQueue.push(selectedText);
+
+                    
+                    if (!isSpeaking) {
+                        speakText(speechQueue.shift());
+                    }
+                });
+            });
+        }
+    });
+</script>
+
 
 </body>
 </html>
